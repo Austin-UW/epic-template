@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import { WithStyles, withStyles } from '@material-ui/core'
 import { Link } from 'react-router-dom'
-import { getStylesHeader } from 'src/utils/utils'
 // used in header for each link
 import { link } from './linkStyles'
 const styles = () => ({ link })
+
+export const getStylesHeader = (conditionTrue: boolean): CSSProperties => {
+  // whether or not to underline text in header
+  if (conditionTrue) {
+    return { textDecoration: 'underline' }
+  } else {
+    return {}
+  } // no styles
+}
 
 interface OwnProps {
   to: string
@@ -19,7 +27,7 @@ export const NavLink = withStyles(styles)(({ ...props }: TProps) => {
     <Link
       className={props.classes.link}
       to={props.to}
-      style={props.underline ? { ...getStylesHeader(true) } : {}}
+      style={getStylesHeader(props.underline || false)}
       onClick={props.onClick}
     >
       {props.text}

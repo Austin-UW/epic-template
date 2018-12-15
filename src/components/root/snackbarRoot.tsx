@@ -92,10 +92,10 @@ class SnackbarWrapComponent extends React.Component<TProps> {
     )
   }
 }
-const mapStateToProps: MSProps<StateProps> = (state: TState) => ({
-  open: state.snackbar.open,
-  message: state.snackbar.message,
-  variant: state.snackbar.variant
+const mapStateToProps: MSProps<StateProps> = ({ snackbar }: TState) => ({
+  open: snackbar.open,
+  message: snackbar.message,
+  variant: snackbar.variant
 })
 const mapDispatchToProps: DispatchProps = {
   closeSnackbar: closeSnackbarA

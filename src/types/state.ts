@@ -1,6 +1,6 @@
 import { TSnackbar, TUser } from '.'
 
-export type TState = {
+export type TState = Readonly<{
   drawerOpen: boolean
   snackbar: TSnackbar
   auth: {
@@ -11,4 +11,4 @@ export type TState = {
   error: {
     message: string | null
   }
-}
+}>

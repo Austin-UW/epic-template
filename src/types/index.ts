@@ -5,8 +5,6 @@ export {
   TAction,
   TOpenSnackbar,
   TCloseSnackbar,
-  TAddError,
-  TRemoveError,
   TSetCurrentUser,
   TStartLoading,
   TStopLoading,

@@ -14,11 +14,10 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { exUser as profile } from 'src/profiles'
 import { TAuthType, MSProps, TUser } from 'src/types'
-import { logoutA, setCurrentUserA, startLoadingA, stopLoadingA, toggleA } from 'src/store'
+import { setCurrentUserA, startLoadingA, stopLoadingA, toggleA } from 'src/store'
 import { NavLink } from './navlink'
 import { link } from './linkStyles'
 import { TState } from 'src/types/state'
-import { CSSProperties } from 'jss/css'
 // for navlink.tsx to use, need to do props because ts ain't smart
 
 const styles = () => ({
@@ -35,19 +34,10 @@ interface StateProps {
 }
 interface DispatchProps {
   toggle: typeof toggleA
-  logout: typeof logoutA
+  // logout: typeof logoutA
   startLoading: typeof startLoadingA
   stopLoading: typeof stopLoadingA
   setCurrentUser: typeof setCurrentUserA
-}
-
-export const getStylesHeader = (conditionTrue: boolean): CSSProperties => {
-  // whether or not to underline text in header
-  if (conditionTrue) {
-    return { textDecoration: 'underline' }
-  } else {
-    return {}
-  } // no styles
 }
 
 type Authed = 'map' | 'chat' | 'settings' | 'category' | 'categories' | 'cart'
@@ -75,11 +65,11 @@ class HeaderComp extends React.Component<TProps, { anchorEl: React.ReactNode }> 
     isLoading ? stopLoading() : startLoading()
   }
   toggleAuth = () => {
-    const { authenticated, setCurrentUser, logout } = this.props
-    !authenticated ? setCurrentUser(profile) : logout()
+    const { authenticated, setCurrentUser } = this.props
+    !authenticated ? setCurrentUser(profile) : (() => null)() /* this.props.logout() */
   }
   render() {
-    const { classes, currentComponent, authenticated, user, isLoading, logout } = this.props
+    const { classes, currentComponent, authenticated, user, isLoading /* logout */ } = this.props
     const current = currentComponent
     // dont change to statefull component because "this" will not refer to Header
     return (
@@ -108,7 +98,7 @@ class HeaderComp extends React.Component<TProps, { anchorEl: React.ReactNode }> 
             {/*  */}
             {authenticated && user && (
               <>
-                <NavLink to="/" onClick={logout} text="Logout" />
+                <NavLink to="/" onClick={undefined /* logout */} text="Logout" />
                 <Tooltip classes={{ tooltip: classes.tooltip }} title={`logged in as ${user.username}`}>
                   <Avatar src={user.image} className={classes.avatar} />
                 </Tooltip>
@@ -131,7 +121,7 @@ const mapState: MSProps<StateProps> = (state: TState) => {
 }
 
 const actionCreators: DispatchProps = {
-  logout: logoutA,
+  // logout: logoutA,
   toggle: toggleA,
   startLoading: startLoadingA,
   stopLoading: stopLoadingA,
