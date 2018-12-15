@@ -1,0 +1,35 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "jsx": "react",
+    "lib": ["dom", "es6", "es2016", "es2017"],
+    "rootDir": "src",
+    "target": "es2017",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    // can change this to make typescript less strict
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "pretty": true,
+    "watch": true,
+    "removeComments": false,
+    "sourceMap": false
+  },
+  "exclude": ["src/**/*.test.tsx", "src/**/*.spec.tsx", "node_modules", "build", "scripts", "webpack"]
+}
