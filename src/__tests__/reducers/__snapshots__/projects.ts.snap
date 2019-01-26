@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`project reducer MOVE_COLUMN 1`] = `
+Object {
+  "columns": Object {
+    "10": Object {
+      "id": 10,
+      "name": "In Progress",
+      "taskIds": Array [],
+    },
+    "11": Object {
+      "id": 11,
+      "isCompletedColumn": true,
+      "name": "Done",
+      "taskIds": Array [],
+    },
+    "12": Object {
+      "id": 12,
+      "isCompletedColumn": true,
+      "name": "NAME",
+      "taskIds": Array [],
+    },
+    "3": Object {
+      "id": 3,
+      "name": "To-do",
+      "taskIds": Array [
+        6,
+      ],
+    },
+    "4": Object {
+      "id": 4,
+      "name": "In Progress",
+      "taskIds": Array [],
+    },
+    "5": Object {
+      "id": 5,
+      "isCompletedColumn": true,
+      "name": "Complete",
+      "taskIds": Array [],
+    },
+    "6": Object {
+      "id": 6,
+      "name": "To-do",
+      "taskIds": Array [],
+    },
+    "7": Object {
+      "id": 7,
+      "name": "In Progress",
+      "taskIds": Array [],
+    },
+    "8": Object {
+      "id": 8,
+      "isCompletedColumn": true,
+      "name": "Complete",
+      "taskIds": Array [],
+    },
+    "9": Object {
+      "id": 9,
+      "name": "To-do",
+      "taskIds": Array [],
+    },
+  },
+  "isLoading": false,
+  "pastAction": Object {
+    "type": "CHECK_TASK_OVERDUE",
+  },
+  "pomodoro": Object {
+    "breakSeconds": 300,
+    "currSeconds": 1500,
+    "paused": true,
+    "selectedTaskId": null,
+    "selectingTask": false,
+    "stopWatch": Object {
+      "highest": 0,
+      "pastTimes": Array [],
+      "paused": true,
+      "time": 0,
+    },
+    "totalTimes": Array [
+      Object {
+        "day": 0,
+        "minutes": 0,
+      },
+      Object {
+        "day": 1,
+        "minutes": 0,
+      },
+      Object {
+        "day": 2,
+        "minutes": 0,
+      },
+      Object {
+        "day": 3,
+        "minutes": 0,
+      },
+      Object {
+        "day": 4,
+        "minutes": 0,
+      },
+      Object {
+        "day": 5,
+        "minutes": 0,
+      },
+      Object {
+        "day": 6,
+        "minutes": 0,
+      },
+    ],
+    "workSeconds": 1500,
+    "working": true,
+  },
+  "projects": Object {
+    "0": Object {
+      "categories": Array [
+        "Doggo",
+        "Weed",
+        "Karen",
+        "Great Ideas",
+        "minimum wage",
+        "cat",
+      ],
+      "columnIds": Array [
+        1,
+        0,
+        2,
+      ],
+      "id": 0,
+      "name": "Karen's Marijuana Dog Food",
+    },
+    "1": Object {
+      "categories": Array [
+        "Invasion",
+        "Mass Genocide",
+        "Destruction",
+      ],
+      "columnIds": Array [
+        3,
+        4,
+        5,
+      ],
+      "id": 1,
+      "name": "Russia is just a block of land and it should be ours",
+    },
+    "2": Object {
+      "categories": Array [],
+      "columnIds": Array [
+        6,
+        7,
+        8,
+      ],
+      "id": 2,
+      "name": "Believe in myself",
+    },
+  },
+  "snackbar": Object {
+    "message": "Katrina's Website created successfully!",
+    "open": true,
+    "variant": "success",
+  },
+  "tasks": Object {
+    "6": Object {
+      "color": "#FFFFFF",
+      "id": 6,
+      "name": "E",
+      "subTasks": Array [],
+      "timeWorkedOn": 0,
+    },
+  },
+}
+`;
