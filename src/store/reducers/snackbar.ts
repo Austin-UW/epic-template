@@ -13,13 +13,6 @@ export const snackbarReducer: Reducer<TSnackbar, SnackbarAction> = (
       return { open: true, message, variant }
     case 'CLOSE_SNACKBAR':
       return { ...snackbar, open: false }
-    case 'CREATE_PROJECT':
-      return {
-        ...snackbar,
-        open: true,
-        message: `${action.project.name} created successfully!`,
-        variant: 'success'
-      }
     default:
       return snackbar
   }

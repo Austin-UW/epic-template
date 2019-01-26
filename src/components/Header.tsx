@@ -21,7 +21,6 @@ import {
   ListItemIcon,
   Drawer
 } from '@material-ui/core'
-import { ProjectSearch } from './Home/ProjectSearch'
 import { Trail } from 'react-spring'
 import {
   HowToReg,
@@ -173,7 +172,7 @@ class Topbar extends Component<
                   onClose={this.handleClose}
                 >
                   <div style={{ outline: 'none', margin: 10 }}>
-                    <ProjectSearch variant="menu" onClick={this.handleClose} />
+                    this is a menu man
                   </div>
                 </Menu>
                 <div className={classes.inline}>

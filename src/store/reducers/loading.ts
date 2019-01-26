@@ -1,7 +1,7 @@
 import { Reducer } from 'redux'
-import { LoadingAction } from '../actions/types'
+import { TLoadingAction } from '../actions/types'
 
-export const loadingReducer: Reducer<boolean, LoadingAction> = (
+export const loadingReducer: Reducer<boolean, TLoadingAction> = (
   loading: boolean = false,
   action
 ) => {
